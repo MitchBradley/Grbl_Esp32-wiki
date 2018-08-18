@@ -1,3 +1,3 @@
 Using ESP_32 Grbl
 
-* Bluetooth
+* [Using Bluetooth](https://github.com/bdring/Grbl_Esp32/wiki/Using-Bletooth)
