@@ -14,7 +14,9 @@ Show all the files. This is recursive and will search all subdirectories. Each f
 
 ...where \FOO.NC is the filename. including the directory. In this case the directory is the root. The number following the file name is the file size.
 
+There is a filter for valid file types in grbl_sd.cpp
 
+char fileTypes[FILE_TYPE_COUNT][8] = {".nc", ".txt", ".gcode"}; 
 
 All filenames must be uppercase for now because Grbl only uses upper case.
 
