@@ -18,7 +18,7 @@ There is a filter for valid file types in grbl_sd.cpp
 
 char fileTypes[FILE_TYPE_COUNT][8] = {".nc", ".txt", ".gcode"}; 
 
-All filenames must be uppercase for now because Grbl only uses upper case.
+There are a few naming restrictions because of how grbl strips out characters. I'll need to post those rules or figure out a way around that.
 
 **$FM**
 
