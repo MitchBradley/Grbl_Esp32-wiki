@@ -1,10 +1,10 @@
 # The is currently a proposal only.
 
-### Overview
+## Overview
 
 The command style is temporary and subject to change. The commands and responses were chosen to in a Grbl style rather than a Marlin type style. This will allow Grbl senders to be used without issues. If a Marlin style is preferred, changes can be made after the system is fully tested.
 
-### Commands
+## Commands
 
 **$F**
 
@@ -18,21 +18,18 @@ There is a filter for valid file types in grbl_sd.cpp
 
 char fileTypes[FILE_TYPE_COUNT][8] = {".nc", ".txt", ".gcode"}; 
 
-There are a few naming restrictions because of how grbl strips out characters. I'll need to post those rules or figure out a way around that.
+There are a few naming restrictions because of how grbl strips out characters. I'll need to post those rules or figure out a way around that. Using **line_flags** like **LINE_FLAG_COMMENT_PARENTHESES** might work.
 
 **$FM**
 
 Mount the SD card
 
-**$FU**
-
-Unmount the SD card
 
 **$F=\FOO.NC**
 
 Run file \FOO.NC 
 
-### Other Actions
+## Other Actions
 
 **Pause/Restart**
 
@@ -49,7 +46,7 @@ I am not sure how to send status. I think adding an optional thing to the ? is p
 <Idle|WPos:195.000,144.000,19.000|Bf:15,128|FS:0.000,0.000|Pn:P|WCO:-195.000,-144.000,-19.000|SD:45.5%>
  
 
-### Errors
+## Errors
 
 There will be some sort of state machine type thing to make sure mount, run, unmount, etc do not cause undesirable effects.
 
