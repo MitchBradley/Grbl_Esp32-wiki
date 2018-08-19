@@ -29,6 +29,8 @@ Mount the SD card
 
 Run file \FOO.NC 
 
+Note: If in alarm mode command will fail with error 9
+
 ## Other Actions
 
 **Pause/Restart**
