@@ -18,9 +18,9 @@ Mount the SD card. This must be done before listing or sending files.
 
 Show all the files. This is recursive and will search all subdirectories. Each file will print like this...
 
-[FILE:\FOO.NC,SIZE:29547]
+[FILE:/FOO.NC,SIZE:29547]
 
-...where \FOO.NC is the filename. including the directory. In this case the directory is the root. The number following the file name is the file size. This is not case sensitive. 
+...where /FOO.NC is the filename. including the directory. In this case the directory is the root. The number following the file name is the file size. This is not case sensitive. 
 
 There is a filter for valid file types in grbl_sd.cpp. Only these types will display.
 
@@ -28,9 +28,9 @@ char fileTypes[FILE_TYPE_COUNT][8] = {".NC", ".TXT", ".GCODE"};
 
 There are a few naming restrictions because of how grbl strips out characters. I'll need to post those rules or figure out a way around that. For now: Use only alphanumeric names with no spaces.
 
-**$F=\FOO.NC**
+**$F=/FOO.NC**
 
-This will run file \FOO.NC 
+This will run file /FOO.NC 
 
 Note: If in alarm mode, this command will fail with error 9
 
