@@ -2,8 +2,6 @@
 
 ## Overview
 
-SD Card support is on the Grbl_ESP32_SDCard branch.
-
 This documents the current command set. The commands and responses were chosen to in a Grbl style rather than a Marlin type style. This will allow existing Grbl senders to be used without issues. The current commands have been approved by Sonny (Grbl Dev) and will be reserved for this use to prevent future conflicts.
 
 If you have any suggestions, please post them as an issue.
