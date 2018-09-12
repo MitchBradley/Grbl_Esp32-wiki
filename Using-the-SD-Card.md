@@ -24,7 +24,12 @@ There is a filter for valid file types in grbl_sd.cpp. Only these types will dis
 
 char fileTypes[FILE_TYPE_COUNT][8] = {".NC", ".TXT", ".GCODE"}; 
 
-There are a few naming restrictions because of how grbl strips out characters. I'll need to post those rules or figure out a way around that. For now: Use only alphanumeric names with no spaces.
+*Note:* There are a few naming restrictions because of how grbl strips out characters used for real time commands. It strips out the following characters...
+
+- ' ' (space) it removes spaces to make the buffer more efficient and easier to parse.
+- '?' used to get real time status
+- '!' used for feed hold
+- '~' used for cycle start
 
 **$F=/FOO.NC**
 
