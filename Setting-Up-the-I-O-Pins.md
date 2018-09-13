@@ -69,9 +69,15 @@ Flood and Mist control are output signals that can be used to drive a relay circ
 
 #### Spindle
 
-All spindles are variable speed. If you use an on/off spindle, just set the max RPM in the $$ setting to 1. That will mean any RPM will be full on.
+Spindle can be disabled by commenting out the #define SPINDLE_PWM_PIN line. Grbl will still behave like it has a spindle, but will not output a spindle signal. This can help with machines like pen plotters that don't use a spindle.
 
 Spindle Enable and direction are typically not used on most machines. The features can be enabled in firmware by assigning them a GPIO pin. If Spindle direction is not used, the M4 command is not supported.
+
+All spindles are variable speed. If you use an on/off spindle, just set the max RPM in the $$ setting to 1. That will mean any RPM will be full on.
+
+#### Step and Direction Pins
+
+You can comment out any step and direction pins. This will disable the output signals and free up pins for other uses. Grbl will use those axes, but not output the signals. This could be useful for hobby servo driven axes.
 
 
 
