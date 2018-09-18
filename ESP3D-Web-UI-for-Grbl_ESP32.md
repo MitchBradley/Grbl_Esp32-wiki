@@ -30,6 +30,12 @@ The ESP3d-WEBUI project represents quite contribution to the open source CNC wor
 
 ### Setup
 
+There is a libraries folder in the repo. Copy these folders into your ...Arduino/libraries folder
+
+Configure the features you want at the top of the config.h file. Currently all features cannot be used at the same time on a typical ESP32 dev board because of flash memory size. If you want to use Bluetooth and WiFi at the same time, you can use the Partition Scheme: No OTA (Large APP). This gives more flash space for the application, but you will not be able upload firmware using OTA (over the air) via the WebUI.
+
+We will be trying new partition schemes that might allow all features at the same time.
+
 ##### Startup
 
 At startup it will try to connect to the previous WiFi network it was connected to. If it cannot connect to that network, it will enter AP (Access Point) mode. The default AP SSID is GRBL_ESP with password 12345678. You can connect to that network with a PC, tablet or phone using a browser to the default address of 192.168.0.1
