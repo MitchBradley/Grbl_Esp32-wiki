@@ -9,7 +9,7 @@ Here is a list of things that are considered likely to make it into the firmware
  - **Support hobby servos as an axis:** This will allow things like pen bots to easily be used.
 
 ## Bluetooth
- - **Ad Password Support** Apparently this is now in the ESP-IDF now. What does it take to get into the Arduino Core version.
+ - **Ad Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
 
 ## WebUI
  - Add a probing panel
