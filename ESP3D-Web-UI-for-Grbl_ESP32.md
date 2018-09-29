@@ -4,6 +4,8 @@
 
 ## Overview
 
+TL,DR: [Watch this video](https://youtu.be/7vtWNn9jyDs)
+
 ![](http://www.buildlog.net/blog/wp-content/uploads/2018/09/esp32_webui_1.png)
 
 The [ESP3D-WEBUI](https://github.com/luc-github/ESP3D-WEBUI) project has been modified for use with Grbl_ESP32 by Luc of [luc-github](https://github.com/luc-github). This provides the WiFi functionality on Grbl_ESP32.
