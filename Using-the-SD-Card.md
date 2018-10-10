@@ -57,7 +57,7 @@ When an SD card job is running, the percent complete is appended to the status s
 
 <Idle|WPos:195.000,144.000,19.000|Bf:15,128|FS:0.000,0.000|Pn:P|WCO:-195.000,-144.000,-19.000|SD:45.5> 
 
-## Errors
+**Errors**
 
 There will be some sort of state machine type thing to make sure mount, run, unmount, etc do not cause undesirable effects.
 
