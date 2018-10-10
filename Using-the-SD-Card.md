@@ -16,13 +16,11 @@ Mount the SD card. This must be done before listing or sending files.
 
 Show all the files. This is recursive and will search all subdirectories. Each file will print like this...
 
-[FILE:/FOO.NC,SIZE:29547]
+[FILE:/FOO.NC|SIZE:29547]
 
 ...where /FOO.NC is the filename. including the directory. In this case the directory is the root. The number following the file name is the file size. This is not case sensitive. 
 
-There is a filter for valid file types in grbl_sd.cpp. Only these types will display.
-
-char fileTypes[FILE_TYPE_COUNT][8] = {".NC", ".TXT", ".GCODE"}; 
+There is no filter, all files and folders are reported. Senders, WebUI, etc should handle this from now on.
 
 *Note:* There are a few naming restrictions because of how grbl strips out characters used for real time commands. It strips out the following characters...
 
@@ -45,14 +43,19 @@ Just use the normal grbl cycle start and feedhold commands
 
 **Stop/Quit a file**
 
-Initially this will be Grbl Reset. If that does not work out then $FQ will be added.
+Initially this will be Grbl Reset. If that does not work out then $FQ will be added.The best way to do this is to do a feedhold then a Grbl Reset. The last line will be reported.
+
+Keep in mind that the feedhold will have stopped a move in progress and there will be more moves in the buffer. Restarting and reseting all the modal things is very tricky and left to the sender.
+
+**Errors**
+
+Any gcode errors in the SD card file will terminate the job. The offending line number of the file will be reported.
 
 **Status**
 
-I am not sure how to send status. I think adding an optional thing to the ? is probably the best. Maybe a percentage that gets added in when an SD file is running.
+When an SD card job is running, the percent complete is appended to the status string. This is simply percent of bytes read from the file.
 
-<Idle|WPos:195.000,144.000,19.000|Bf:15,128|FS:0.000,0.000|Pn:P|WCO:-195.000,-144.000,-19.000|SD:45.5>
- 
+<Idle|WPos:195.000,144.000,19.000|Bf:15,128|FS:0.000,0.000|Pn:P|WCO:-195.000,-144.000,-19.000|SD:45.5> 
 
 ## Errors
 
