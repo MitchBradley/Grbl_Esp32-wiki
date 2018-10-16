@@ -54,7 +54,7 @@ On your first connection, you will be prompted to load the file that contains th
 
 ##### Users
 
-There are 2 users "admin" and "user". You need to be logged in as admin to change any WEB-UI settings. You can only interact with Grbl as "user". 
+There are 2 users "admin" and "user". You need to be logged in as admin to change any WEB-UI settings. You can only interact with Grbl as "user". The default password for "admin" is "admin"
 
 ### Preferences
 
