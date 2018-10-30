@@ -10,7 +10,7 @@ You can also change the settings in the WebUI
 
 ## Performance
 
-The performance for streaming gcode is not that fast. Here are the recommended setting for LaserGRbl
+The performance for streaming gcode is not that fast. Here are the recommended setting for LaserGRBL.
 
 <img src="http://www.buildlog.net/blog/wp-content/uploads/2018/10/telnet_lg.png" width="600">
 
