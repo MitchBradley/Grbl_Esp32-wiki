@@ -15,8 +15,15 @@ Here is a list of things that are considered likely to make it into the firmware
  - Add a probing panel
  - Support uploadable machine profiles (see above in Grbl section)
 
+## Spindle
+ - Update PWM calc to current Grbl method
+ - Increase resolution to max (16 bit) automatically based on frequency. This will be transparent to the user.
+
 ## Display
  - Add support for a simple I2C display
+
+## I/O expansion
+ - Look at support for more I/O with an I/O expander
 
 ## --Not on near term roadmap now--
  - Wired Ethernet:
