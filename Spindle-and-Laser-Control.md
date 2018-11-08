@@ -29,7 +29,7 @@ If you want an On/Off signal rather than variable speed (PWM) output, you just c
 
 ## Laser Mode
 
-Laser mode activates several features
+Laser mode activates several features. Use $32 to turn on and off laser mode.
 
 1. The laser will only fire during an active G1, G2 or G3 command. This means rapid moves between cuts will turn off the laser
 2. You can change speed on the fly without halting the move. This allows things like high speed laser engraving
