@@ -1,8 +1,5 @@
-**<u>Note: This page is for reference only for a coming feature in Grbl_ESP32. Some of the screenshots are out of date and will be replaced soon</u>**
+**<u>Note: Some of the screenshots are out of date and will be replaced soon</u>**
 
-[The WebUI and Wifi feature are currently on the WebUI branch](https://github.com/bdring/Grbl_Esp32/tree/WebUI)
-
-## Overview
 
 TL,DR: [Watch this video](https://youtu.be/7vtWNn9jyDs)
 
