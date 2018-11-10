@@ -2,11 +2,18 @@ Grbl_Esp32 has a PWM output that can be used for spindle speed control or laser 
 
 
 
-## PWM Resolution
+## PWM Frequency and Resolution
 
-Currently this is fixed at 8 bit (0-255). ESP32 allows up to 16 bit (0-65535). There is an item on the roadmap to to select the highest resolution based on the frequency.
+The PWM feature uses a 80,000,000 clock. Typically you first select a base frequency for your PWM. After you determine that, you can determine what your duty cycle resolution (in bits) can be. Divide 80,000,000 by your frequency to see how many counts you have left. That remainder is what you can use for your duty cycle.
 
+For example: If your base frequency is 5,000. 80,000,000 / 5,000 = 16,000. You need to select a resolution that is lower that that in bits. 13 bit resolution is 2^13 = 8192, which is the highest one you can use.
 
+Defaults (in cpu_map.h)
+- SPINDLE_PWM_BASE_FREQ 5000
+- SPINDLE_PWM_BIT_PRECISION 12
+- SPINDLE_PWM_MAX_VALUE 4096 // 2^SPINDLE_PWM_BIT_PRECISION
+
+After setting those everything is transparent to the user. If the user selects 10,000 as the max RPM, all RPM values are mapped to the values set in cpu_map.h.  There is no penalty for choosing a high resolution.
 
 ## Basic Spindle Settings
 
