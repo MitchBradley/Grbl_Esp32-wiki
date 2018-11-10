@@ -15,9 +15,6 @@ Here is a list of things that are considered likely to make it into the firmware
 ## WebUI
  - Add a probing panel
 
-## Spindle
- - Increase resolution to max (16 bit) automatically based on frequency. This will be transparent to the user.
-
 ## Display
  - Add support for a simple I2C display
 
