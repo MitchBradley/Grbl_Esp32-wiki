@@ -10,7 +10,7 @@ To fit Wifi and Bluetooth, have OTA (over the air) firmware updates and room in 
 
 ![](http://www.buildlog.net/blog/wp-content/uploads/2018/11/min_spiffs.png)
 
-Unfortunately there is an error in the definition file (min_spiffs.csv) for this scheme. It gives the wrong size for SPIFFS. You need to edit the file to be like the following. The only change is 0xF000 should be 0x2F000. The file is located in this directory. 
+Unfortunately there is an error in the definition file (min_spiffs.csv) for this scheme. It gives the wrong size for SPIFFS. You need to edit the file to be like the following. The file is located in this directory. 
 
 C:\Users\<username>\AppData\Local\Arduino15\packages\esp32\hardware\esp32\1.0.0\tools\partitions
 
