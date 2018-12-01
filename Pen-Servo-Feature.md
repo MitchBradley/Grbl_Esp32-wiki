@@ -16,6 +16,10 @@ You don't need I/O pins for Z_STEP_PIN or Z_DIRECTION_PIN, so you can remove tho
 
 **Homing:** You do not home the Z axis. This means you need to setup the homing features in config.h for just the X and Y axes.  With that said, you do want the pen up when homing. The best way to do this is to set a work offset for Z.  Send the Z to -5mm (or the negative of whatever you chose as the pen up height) with "G0 Z-5". Now set this as the current work Z with "G10 L20 P0 Z0". Now, at turn on, the machine 0 will be at Z0, but the work offset will put the work zero at Z5. This means the pen will move up immediately at turn on. Now you can home with $H. Work offsets are saved to flash memory, so you don't need to do this again.
 
+## Calibration
+
+You can calibrate the end points using the steps/mm ($102) and max travel ($132) for the Z axis. The default value is 100. Think of it as percent. Changing a value to 110 will change the PWM signal by 10%. 
+
 ## Usage
 
 It will use normal gcode without any special modifications, but you can optimize it.
