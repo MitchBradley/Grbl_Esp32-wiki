@@ -14,6 +14,8 @@ Uncomment **#define USE_PEN_SERVO** in config.h to turn on the feature. Another 
 
 You don't need I/O pins for Z_STEP_PIN or Z_DIRECTION_PIN, so you can remove those or comment them out.
 
+Set $102 and $132 to 100. These are used for calibration and the values 100 removes any calibration offsets (see section below)
+
 **Homing:** You do not home the Z axis. This means you need to setup the homing features in config.h for just the X and Y axes.  With that said, you do want the pen up when homing. The best way to do this is to set a work offset for Z.  Send the Z to -5mm (or the negative of whatever you chose as the pen up height) with "G0 Z-5". Now set this as the current work Z with "G10 L20 P0 Z0". Now, at turn on, the machine 0 will be at Z0, but the work offset will put the work zero at Z5. This means the pen will move up immediately at turn on. Now you can home with $H. Work offsets are saved to flash memory, so you don't need to do this again.
 
 ## Calibration
