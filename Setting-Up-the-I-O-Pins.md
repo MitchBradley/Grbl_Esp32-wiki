@@ -79,6 +79,10 @@ All spindles are variable speed. If you use an on/off spindle, just set the max 
 
 You can comment out any step and direction pins. This will disable the output signals and free up pins for other uses. Grbl will use those axes, but not output the signals. This could be useful for hobby servo driven axes.
 
+## Defining a custom cpu map.
+
+The default cpu map is defined as CPU_MAP_ESP32 in [cpu_map.h](https://github.com/bdring/Grbl_Esp32/blob/master/Grbl_Esp32/cpu_map.h). There are several others defined as well that can serve as examples of setting up a complete machine definition. 
+
 
 
 
