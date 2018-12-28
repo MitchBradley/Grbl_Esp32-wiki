@@ -1,5 +1,6 @@
 Using ESP_32 Grbl
 
+* [Compiling the firmware](https://github.com/bdring/Grbl_Esp32/wiki/Compiling-the-firmware)
 * [Hardware for Grbl_ESP32](https://github.com/bdring/Grbl_Esp32/wiki/Hardware)
 * [Setting up the I/O pins](https://github.com/bdring/Grbl_Esp32/wiki/Setting-Up-the-I-O-Pins)
 * [Using Bluetooth](https://github.com/bdring/Grbl_Esp32/wiki/Using-Bletooth)
