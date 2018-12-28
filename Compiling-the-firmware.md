@@ -6,7 +6,7 @@ Bluetooth and all wifi options are now compiled into one large firmware. You nee
 
 ### Copy Libraries
 
-There are some libraries that must be added to the Arduino IDE. Copy the folders in the Libraries to the libraries folder in your Arduino folder on your computer. Typically some folder like "...\Documents\Arduino\libraries" (Windows computer).
+There are some libraries that must be added to the Arduino IDE. Copy the folders in the [Libraries](https://github.com/bdring/Grbl_Esp32/tree/master/libraries) folder to the libraries folder in your Arduino folder on your computer. Typically some folder like "...\Documents\Arduino\libraries" (Windows computer).
 
 ### Customize
 
