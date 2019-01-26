@@ -28,3 +28,9 @@ After loading the file, refresh your browser. If you reload firmware, you typica
 ## First Run
 
 You will get an **error 7** on the first run of the code, if you happen to have a serial terminal open you will see it. It is trying to load saved settings, which don't exist, so it loads defaults.
+
+## Programming Errors
+
+It is common on some dev board to get "Connecting........_____....._____....._____..." The Arduino IDE is having trouble putting the ESP32 in bootloader mode. Try holding down the boot button until it gets past the "Connecting..." phase.
+
+You may also see flash errors. I have found that some dev boards have trouble being programmed while prugged in. Try removing the dev board from the shield while programming. 
