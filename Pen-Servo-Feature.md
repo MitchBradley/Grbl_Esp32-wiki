@@ -8,6 +8,8 @@ The servo is controlled by a new RTOS task. Grbl thinks it is running a normal s
 
 The tasks runs at a default of 50 times per second, so it will do a pretty good job of smoothly tracking the motion of the Z axis. You can use the normal settings of speed and acceleration of the Z axis to control the speed of the servo. Note: Your gcode feed rates will also control the speed.
 
+The servo is powered by 5V. If you do not have the main power plugged in and do have a USB cable plugged in, the 5V comes from the USB cable. Typical USB current may not be enough to power the servo and will cause a voltage drop, which causes the ESP32 to reboot continuously. In general, you should always have the main power plugged in if you have a USB cable attached.
+
 ## Setup
 
 In the config.h file change **#define CPU_MAP_ESP32** to **#define CPU_MAP_PEN_LASER**. If you have a custom design, define your own pin map.
