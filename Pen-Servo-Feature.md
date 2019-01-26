@@ -10,7 +10,9 @@ The tasks runs at a default of 50 times per second, so it will do a pretty good 
 
 ## Setup
 
-Uncomment **#define USE_PEN_SERVO** in config.h to turn on the feature. Another way to do it is to place #define USE_PEN_SERVO in a custom configuration in cpu_map.h. See the CPU_MAP_MIDTBOT in cpu_map.h for a good example.
+In the config.h file change **#define CPU_MAP_ESP32** to **#define CPU_MAP_PEN_LASER**. If you have a custom design, define your own pin map.
+
+Uncomment **#define USE_PEN_SERVO** in config.h to turn on the feature.
 
 You don't need I/O pins for Z_STEP_PIN or Z_DIRECTION_PIN, so you can remove those or comment them out.
 
