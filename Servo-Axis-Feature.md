@@ -4,6 +4,8 @@ The servo axis feature allows you to use a hobby as an axis that is full coordin
 
 https://www.youtube.com/watch?v=mBn_ktAaM_M
 
+![](http://www.buildlog.net/blog/wp-content/uploads/2019/02/20190219_095155.jpg)
+
 ## Setup
 
 Step 1: In **config.h** uncomment **#define USE_SERVO_AXES**
