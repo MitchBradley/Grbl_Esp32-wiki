@@ -7,6 +7,7 @@ Using ESP_32 Grbl
 * [Using the SD Card](https://github.com/bdring/Grbl_Esp32/wiki/Using-the-SD-Card)
 * [Web-UI and Wifi](https://github.com/bdring/Grbl_Esp32/wiki/ESP3D-Web-UI-for-Grbl_ESP32)
 * [Using Telnet](https://github.com/bdring/Grbl_Esp32/wiki/Using-Telnet)
+* [Using the Servo Axis Feature](https://github.com/bdring/Grbl_Esp32/wiki/Servo-Axis-Feature)
 
 ***
 
