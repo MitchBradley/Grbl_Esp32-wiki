@@ -22,11 +22,11 @@ Step 3: Optionally, you can adjust more options in the **init_servos()** section
 
 
 
-**Direction Reversal**
+### Direction Reversal
 
 You can reverse the direction of the servo just like you do with a stepper motor using the $3 setting.
 
-**Calibration**
+### Calibration
 
 Calibration of the end points can be done with existing Grbl settings. This can help with servos that work outside the default PWM pulse range of 0.001sec to 0.002sec.
 
@@ -34,7 +34,7 @@ The \$10x settings are used for stepper motor resolution which does not apply to
 
 The $13x settings are used for the upper end of the pulse range. This is normally used for max travel, but that is applied to servos in a different way. It applies a percentage to the upper end of the pulse range, just like the lower end example.
 
-**Optional behaviors**
+### Optional behaviors
 
 **Homing:** You should not home a servo axis because it already knows it's position. You can command it to a position during homing with the set_homing_type(...) and set_homing_position(...) commands.
 
@@ -42,7 +42,13 @@ The $13x settings are used for the upper end of the pulse range. This is normall
 
 **Stepper Disable:** You can have the servos hold position or disable when the steppers disable.
 
-**Important Things to Consider**
+### Usage
+
+The range of the servo is mapped across the minimum and maximum axis positions given to the servo. If you go above or below the min and max on the axis, the servo will only go to the min or max. For example if you map an axis to 0mm to 25mm, the servo will never move less than the 0mm position. If you send it to -10mm, Grbl will say the axis is at -10mm, but the servo will only go as far as you set it up to go. If you then move it to 10mm, the servo will not move until the axis gets above 0mm.
+
+These positions are in current work coordinate system. If you set an offset by zeroing an axis (or other methods) the servo will move if required. If you have no offset with the servo at 10mm and zero the axis, the servo will immediately move to the 0mm position. This is a method you can use to have the servos move to a specific location at turn on.
+
+### Important Things to Consider
 
 Keep in mind that most servos are a lot less accurate than stepper motors. They also might overshoot or jitter a bit. You can buy them form less than $2 to hundreds of dollars. You get what you pay for. 
 
