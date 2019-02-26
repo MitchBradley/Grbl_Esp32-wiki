@@ -1,0 +1,6 @@
+Many values that can be adjusted by the user are stored in non-volatile RAM and will be restored when the controller is powered on. The $RST command can be used to restored default values. 
+
+* $RST=$ : Erases and restores the $$ Grbl settings back to defaults, which is defined by the default settings file used when compiling Grbl. Often OEMs will build their Grbl firmwares with their machine-specific recommended settings. This provides users and OEMs a quick way to get back to square-one, if something went awry or if a user wants to start over.
+* $RST=# : Erases and zeros all G54-G59 work coordinate offsets and G28/30 positions stored in EEPROM. These are generally the values seen in the $# parameters printout. This provides an easy way to clear these without having to do it manually for each set with a G20 L2/20 or G28.1/30.1 command.
+* $RST=@ : This restores the default Wifi and Bluetooth settings
+* $RST=* : This clears and restores all of the EEPROM data used by Grbl. This includes $$ settings, $# parameters, $N startup lines, $I build info string, Wifi and Bluetooth settings. Note that this doesn't wipe the entire EEPROM, only the data areas Grbl uses. To do a complete wipe, please use the Arduino IDE's EEPROM clear example project.
