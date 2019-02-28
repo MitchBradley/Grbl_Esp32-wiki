@@ -29,9 +29,9 @@ The ESP3d-WEBUI project represents quite contribution to the open source CNC wor
 
 ### Setup
 
-There is a libraries folder in the repo. Copy these folders into your ...Arduino/libraries folder
+First, make sure [read these instructions](https://github.com/bdring/Grbl_Esp32/wiki/Compiling-the-firmware).
 
-Configure the features you want at the top of the config.h file. Currently all features cannot be used at the same time on a typical ESP32 dev board because of flash memory size. If you want to use Bluetooth and WiFi at the same time, you can use the Partition Scheme: No OTA (Large APP). This gives more flash space for the application, but you will not be able upload firmware using OTA (over the air) via the WebUI.
+The default options in config.h are fine for the WebUI. You may want to enable authentication by uncommenting #define ENABLE_AUTHENTICATION if you are on a public wifi.
 
 We will be trying new partition schemes that might allow all features at the same time.
 
