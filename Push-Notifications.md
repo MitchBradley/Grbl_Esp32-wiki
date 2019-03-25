@@ -6,7 +6,7 @@ Push Notifications are now an option in Grbl_ESP32. When events occur, the firmw
 * [Pushover Notification](https://github.com/luc-github/ESP3D/wiki/Pushover) (https://pushover.net/) not Free
 * [Email using SMTP and HTTPS](https://github.com/luc-github/ESP3D/wiki/Email_and_SMTP) Free
 
-The feature is enabled with #define ENABLE_NOTIFICATIONS in the config.h file. Further setup is required via the WebUI or via the [ESP610] command.
+The feature is enabled with #define ENABLE_NOTIFICATIONS in the config.h file. Further setup is required via the WebUI or via the [[ESP610]](https://github.com/bdring/Grbl_Esp32/blob/WebUI/doc/Commands.txt).
 
 In Grbl_ESP32 push notifications are only used when running a job from an SD card. You will be notified when the job completes or an error occurs. 
 
