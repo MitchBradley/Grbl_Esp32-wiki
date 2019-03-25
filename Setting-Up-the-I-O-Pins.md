@@ -8,7 +8,7 @@ Here are the pins you can use. Be very careful to only use each I/O pin in one p
 
 ### Usable I/O pins
 
-- GPIO_NUM_2
+- GPIO_NUM_2 (some dev boards have an LED on this)
 - GPIO_NUM_4
 - GPIO_NUM_5 -  (Used by SD Card)
 - GPIO_NUM_12
@@ -78,6 +78,14 @@ All spindles are variable speed. If you use an on/off spindle, just set the max 
 #### Step and Direction Pins
 
 You can comment out any step and direction pins. This will disable the output signals and free up pins for other uses. Grbl will use those axes, but not output the signals. This could be useful for hobby servo driven axes.
+
+#### Ganged Axes & Axis Squaring
+
+Many CNC machines use (2) motors on one or more axes. In some cases you would gang these in hardware. In other cases you many want to be able to control the motors separately enough to allow squaring of the axes during homing.
+
+Squaring uses the motors and homing switches to separately home each motor. To limit the number of I/O pins, this is done in a special way. Each axis will only use (1) home switch pin, (1) direction pin, and (2) step pins. Each motor has its own home switch switch, but they are wired to the same I/O pin. The homing sequence will drive both motors towards the switches. As soon as one switch is touched, each motor will will separately home. As long as the switches are square, the axis should now be square. The $1, step idle delay, should be set to 255 to prevent the motors from turning off to preserve the squareness held by the motors.
+
+See the CPU_MAP_MPCNC as a good example of this.
 
 ## Defining a custom cpu map.
 
