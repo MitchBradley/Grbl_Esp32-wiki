@@ -6,6 +6,7 @@ Here is a list of things that are considered likely to make it into the firmware
 ## Grbl
  - **Add additional axes:**
  - Add basic kinematics
+ - Add support for SPI stepper drivers
 
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
@@ -15,7 +16,6 @@ Here is a list of things that are considered likely to make it into the firmware
 
 ## Display
  - Add support for a simple I2C display
- - Add push notifications for job complete
 
 ## I/O expansion
  - Look at support for more I/O with an I/O expander
@@ -25,4 +25,5 @@ Here is a list of things that are considered likely to make it into the firmware
 
 ## Recently Completed
  - Servo Axis: Servos can be used on any axis
- - 
+ - Push Notifications:
+ - Ganged Axes: with auto squaring
