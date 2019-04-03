@@ -12,6 +12,10 @@ There are some libraries that must be added to the Arduino IDE. Copy the folders
 
 The default firmware is setup for use with the [Grbl_ESP32 Development Board](https://www.tindie.com/products/33366583/grbl_esp32-cnc-development-board-v31/). If you have a different hardware target, make sure the I/O pin mapping is correct. See [this wiki page](https://github.com/bdring/Grbl_Esp32/wiki/Setting-Up-the-I-O-Pins).
 
+### Startup Info
+
+The USB serial port is established right away and will display a lot of useful information. It will also ride through a crash and display useful debugging information. If you want to know the Wifi settings being used, watch this port on startup.
+
 ### WebUI
 
 When you first try to use the WebUI, you will get this screen.
@@ -21,13 +25,13 @@ When you first try to use the WebUI, you will get this screen.
 <img src="http://www.buildlog.net/blog/wp-content/uploads/2018/11/load_webui.jpg" width="600">
 
 ***
-The file, "index.html.gz". It is in [this folder]https://github.com/bdring/Grbl_Esp32/tree/master/Grbl_Esp32/data).
+The file, "index.html.gz". It is in [this folder](https://github.com/bdring/Grbl_Esp32/tree/master/Grbl_Esp32/data).
 
-After loading the file, refresh your browser. If you reload firmware, you typically don't need to reload "index.htnl.gz". If you want to upload a new version of "index.html.gz", use the green folder icon on the ESP32 tab of the WebUI.
+After loading the file, refresh your browser. If you reload firmware, check to see if "index.htnl.gz" has changed. If you need to upload a new version of "index.html.gz", use the green folder icon on the ESP32 tab of the WebUI.
 
 ## First Run
 
-You will get an **error 7** on the first run of the code, if you happen to have a serial terminal open you will see it. It is trying to load saved settings, which don't exist, so it loads defaults.
+You will get an **error 7** on the first run of the code, if you happen to have a serial terminal open you will see it. It is normal behavior. It is trying to load saved settings, which don't exist yet, so it loads defaults. You should not see the error again.
 
 ## Programming Errors
 
