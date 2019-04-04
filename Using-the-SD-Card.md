@@ -4,6 +4,8 @@
 
 All commands are in the [ESP...] format. They are defined [in this document](https://github.com/bdring/Grbl_Esp32/blob/master/doc/Commands.txt).
 
+Note: If you have authentication enabled (which is not the default), you will need to supply a password for some of the commands. Example [ESP210]pwd=admin  (this assume you are using the default password of "admin")
+
 ## Commands
 
 ### Get SD Card Status
