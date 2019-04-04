@@ -4,9 +4,15 @@ The code should be compiled using the latest Arduino IDE and esp32 core. **Serio
 
 Bluetooth and all wifi options are now compiled into one large firmware. You need to select the **Minimal SPIFFS (Large APPS and OTA)** partition scheme under the Tools...Partition Scheme... menus or the firmware and WebUI will not fit.
 
+Here are the settings you should use.
+
+![IDE Settings](http://www.buildlog.net/blog/wp-content/uploads/2019/04/esp32_settings.png)
+
 ### Copy Libraries
 
 There are some libraries that must be added to the Arduino IDE. Copy the folders in the [Libraries](https://github.com/bdring/Grbl_Esp32/tree/master/libraries) folder to the libraries folder in your Arduino folder on your computer. Typically some folder like "...\Documents\Arduino\libraries" (Windows computer).
+
+
 
 ### Customize
 
