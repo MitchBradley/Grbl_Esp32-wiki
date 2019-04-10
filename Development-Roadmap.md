@@ -6,7 +6,8 @@ Here is a list of things that are considered likely to make it into the firmware
 ## Grbl
  - **Add additional axes:**
  - Add basic kinematics
- - Add support for SPI stepper drivers
+ - Add support for [SPI stepper drivers](https://github.com/bdring/Grbl_Esp32/issues/108)
+ - Use [RMT for step generation](https://github.com/bdring/Grbl_Esp32/issues/115). 
 
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
