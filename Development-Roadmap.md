@@ -8,6 +8,7 @@ Here is a list of things that are considered likely to make it into the firmware
  - Add basic kinematics
  - Add support for [SPI stepper drivers](https://github.com/bdring/Grbl_Esp32/issues/108)
  - Use [RMT for step generation](https://github.com/bdring/Grbl_Esp32/issues/115). 
+ - Add a way to send a startup message with the cpu_map being used, like... [MSG:Using cpu_map...ESP32_TMC2130]
 
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
