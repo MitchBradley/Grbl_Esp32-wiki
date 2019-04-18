@@ -11,5 +11,10 @@ Using ESP_32 Grbl
 
 ***
 
+* [FAQ - Frequenty Asked Questions](https://github.com/bdring/Grbl_Esp32/wiki/FAQ)
+
+
+***
+
 
 * [Development Roadmap](https://github.com/bdring/Grbl_Esp32/wiki/Development-Roadmap)
