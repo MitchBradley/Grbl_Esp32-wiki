@@ -7,8 +7,6 @@ Here is a list of things that are considered likely to make it into the firmware
  - **Add additional axes:**
  - Add basic kinematics (see Kinematics branch)
  - Add support for [SPI stepper drivers](https://github.com/bdring/Grbl_Esp32/issues/108) (in TMC2130 branch)
- - Use [RMT for step generation](https://github.com/bdring/Grbl_Esp32/issues/115). (in devt branch)
- - Add [switch debouncing](https://github.com/bdring/Grbl_Esp32/issues/127) (in devt branch now)
  - Add a way to send a startup message with the cpu_map being used, like... [MSG:Using cpu_map...ESP32_TMC2130]
  - Add a way to implement buttons that send commands like..homing, jogging, print a file from SD card, etc. (see limit_debounce branch)
 
@@ -28,6 +26,8 @@ Here is a list of things that are considered likely to make it into the firmware
  - Wired Ethernet:
 
 ## Recently Completed
+ - RMT for step generation option
+ - Limit switch debouncing option
  - Servo Axis: Servos can be used on any axis
  - Push Notifications:
  - Ganged Axes: with auto squaring
