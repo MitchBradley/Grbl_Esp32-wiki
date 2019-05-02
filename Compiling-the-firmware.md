@@ -43,4 +43,8 @@ You will get an **error 7** on the first run of the code, if you happen to have 
 
 It is common on some dev board to get "Connecting........_____....._____....._____..." The Arduino IDE is having trouble putting the ESP32 in bootloader mode. Try holding down the boot button until it gets past the "Connecting..." phase.
 
-You may also see flash errors. I have found that some dev boards have trouble being programmed while prugged in. Try removing the dev board from the shield while programming. 
+You may also see flash errors. I have found that some dev boards have trouble being programmed while prugged in. Try removing the dev board from the shield while programming.
+
+## WiFi Firmware Upload
+
+It is often easiest to upload new firmware via WiFi. After you have programmed the board once with Grbl_ESP32, this feature will be enabled. If you put the Arduino IDE compiler into verbose mode, via the the File...Preferences menu, you will see where the compiled (.bin) file has been put. On the WebUI...ESP3D tab you will find an firmware upload button (yellow cloud).
