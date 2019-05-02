@@ -1,6 +1,6 @@
 # Setting Up the I/O Pins
 
-Most I/O setup is done in the [cpu_map.h](cpu_map.h) file. Note: All I/O is 3.3V and the current is very low. Do not connect anything directly to relays, solenoids, etc.
+Most I/O setup is done in the [cpu_map.h](https://github.com/bdring/Grbl_Esp32/blob/master/Grbl_Esp32/cpu_map.h) file. Note: All I/O is 3.3V and the current capability is very low. Do not connect any I/O directly to relays, solenoids, etc.
 
 There are more features than available I/O pins, so you need to determine what features you want.
 
@@ -8,7 +8,7 @@ Here are the pins you can use. Be very careful to only use each I/O pin in one p
 
 ### Usable I/O pins
 
-- GPIO_NUM_2 (some dev boards have an LED on this)
+- GPIO_NUM_2 (Some dev boards have an LED on this. It works better as an output)
 - GPIO_NUM_4
 - GPIO_NUM_5 -  (Used by SD Card)
 - GPIO_NUM_12
@@ -28,7 +28,7 @@ Here are the pins you can use. Be very careful to only use each I/O pin in one p
 - GPIO_NUM_32
 - GPIO_NUM_33
 
-### Input Only
+### Input Only (no pullup/pulldown)
 
 - GPIO_NUM_34
 - GPIO_NUM_35
