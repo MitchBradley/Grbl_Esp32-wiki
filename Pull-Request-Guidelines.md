@@ -8,8 +8,8 @@ For experimental features, it is also acceptible to target other, non master, br
 
 ### Build Date
 
-Change the build date in grbl.h to the date of of the pull request. 
-$define GRBL_VERSION_BUILD "YYYYMMDD" ... Example: #define GRBL_VERSION_BUILD "20190517"
+Any time changes affect the compiled firmware, change the build date in grbl.h to the date of of the pull request. 
+$define GRBL_VERSION_BUILD "YYYYMMDD" ... Example: #define GRBL_VERSION_BUILD "20190517".
 
 **Note:** This date may be changed if other changes, with later dates are merged first.
 
