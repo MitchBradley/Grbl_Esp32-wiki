@@ -15,7 +15,7 @@ Here is a list of things that are considered likely to make it into the firmware
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
 
 ## WebUI (Wifi)
- - Add a probing panel (in testing)
+ - Add tool tips to buttons
 
 ## Display
  - Add support for a simple I2C display
@@ -27,6 +27,8 @@ Here is a list of things that are considered likely to make it into the firmware
  - Wired Ethernet:
 
 ## Recently Completed
+ - Probe panel added to WebUI
+ - RC ESC Spindle Support
  - RMT for step generation option
  - Limit switch debouncing option
  - Servo Axis: Servos can be used on any axis
