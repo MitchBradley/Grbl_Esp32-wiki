@@ -6,8 +6,7 @@ Here is a list of things that are considered likely to make it into the firmware
 ## Grbl
  - **Add additional axes:**
  - Add basic kinematics (see Kinematics branch)
- - Add support for [SPI stepper drivers](https://github.com/bdring/Grbl_Esp32/issues/108) (in TMC2130 branch)
-   - Look into daisy chained SPI support to TMC2130, so only one CS is required for multiple TMC2130 drivers 
+ - Look into daisy chained SPI support to TMC2130, so only one CS is required for multiple TMC2130 drivers 
  - Add a way to send a startup message with the cpu_map being used, like... [MSG:Using cpu_map...ESP32_TMC2130]
  - Add a way to implement buttons that send commands like..homing, jogging, print a file from SD card, etc. (see limit_debounce branch)
 
@@ -29,6 +28,7 @@ Here is a list of things that are considered likely to make it into the firmware
 ## Recently Completed
  - Probe panel added to WebUI
  - RC ESC Spindle Support
+ - Added TMC2130 Support
  - RMT for step generation option
  - Limit switch debouncing option
  - Servo Axis: Servos can be used on any axis
