@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=mBn_ktAaM_M
 
 ## Setup
 
-Step 1: In **config.h** uncomment **#define USE_SERVO_AXES**
+Step 1: In **config.h** uncomment **#define USE_SERVO_AXES** or add **#define USE_SERVO_AXES** to your cpu_map in **cpu_map.h**.
 
 Step 2: In **cpu_map.h** you need to define the I/O pins you want to use for the PWM, the PWM timer channel and the  millimeter range you want to map to the servo range. An example is shown below.  follow the same format for each axis you want. 
 
@@ -20,9 +20,7 @@ Step 2: In **cpu_map.h** you need to define the I/O pins you want to use for the
 		
 ```
 
-Step 3: Optionally, you can adjust more options in the **init_servos()** section of **servo_axis.cpp**
-
-
+Step 3: Advanced. You can adjust more options in the **init_servos()** section of **servo_axis.cpp**
 
 ### Direction Reversal
 
@@ -36,7 +34,13 @@ The \$10x settings are used for stepper motor resolution which does not apply to
 
 The $13x settings are used for the upper end of the pulse range. This is normally used for max travel, but that is applied to servos in a different way. It applies a percentage to the upper end of the pulse range, just like the lower end example.
 
+Z Axis Example
+
+Start with $103=100 and $132=100. This would be 100% (no change) for both ends of travel. Use $103 to the lower end of travel and $132 to adjust the upper end of travel.
+
 ### Optional behaviors
+
+These are adjusted in the init_servos() functions in servo_axis.cpp
 
 **Homing:** You should not home a servo axis because it already knows it's position. You can command it to a position during homing with the set_homing_type(...) and set_homing_position(...) commands.
 
