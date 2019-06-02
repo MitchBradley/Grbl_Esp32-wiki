@@ -10,4 +10,8 @@
 
 This error is due to improper installation of required libraries. See the [Copy Libraries](https://github.com/bdring/Grbl_Esp32/wiki/Compiling-the-firmware) section of the Compiling the Firmware Wiki page.
 
+### Why do I see this error "E (4380) SPIFFS: mount failed, -10025"?
+
+This is due to a corrupt SPIFFS. It can happen when switching partition sizes. You can reformat the SPIFFS with the **[ESP710]FORMAT** command sent from a serial terminal.
+
 
