@@ -19,9 +19,8 @@ Basically, the ESP32 becomes a web server. You use a browser to access a web int
 - Full interface to SD card
 - Easily add your own macros
 - Display a camera in UI
-- Works in parallel with serial port and Bluetooth modes
 
-The ESP3d-WEBUI project represents quite contribution to the open source CNC world and you should consider a donation to it.
+The ESP3d-WEBUI project represents quite a contribution to the open source CNC world and you should consider a donation to it.
 
  [<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" alt="PayPal – The safer, easier way to pay online.">](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y8FFE7NA4LJWQ)    
 
@@ -31,27 +30,23 @@ The ESP3d-WEBUI project represents quite contribution to the open source CNC wor
 
 First, make sure [read these instructions](https://github.com/bdring/Grbl_Esp32/wiki/Compiling-the-firmware).
 
-The default options in config.h are fine for the WebUI. You may want to enable authentication by uncommenting #define ENABLE_AUTHENTICATION if you are on a public wifi.
-
-We will be trying new partition schemes that might allow all features at the same time.
+The default options in config.h are fine for the WebUI. You may want to enable authentication by uncommenting #define ENABLE_AUTHENTICATION if you are on a public WiFi.
 
 ##### Startup
 
-At startup it will try to connect to the previous WiFi network it was connected to. If it cannot connect to that network, it will enter AP (Access Point) mode. The default AP SSID is GRBL_ESP with password 12345678. You can connect to that network with a PC, tablet or phone using a browser to the default address of 192.168.0.1
+At startup it will try to connect to the previous WiFi network it was connected to. If it cannot connect to that network, it will enter AP (Access Point) mode. The default access point SSID is GRBL_ESP with password 12345678. Connect to that network with a PC, tablet or phone. Use a web browser to load the WebUI with the default address of 192.168.0.1
 
-**Note:** All of this information is sent to the serial port during bootup. If you want to get the current network information send $I on a serial terminal.
+**Note:** All of this information is sent to the serial port during bootup. You can also get the current network information by send $I on a serial terminal.
 
-Once connected, in any mode, you can change the settings in the ESP3D panel. Make sure you set any changes and refresh the page to update the session.
+#### First connection
 
-##### First connection
+![](http://www.buildlog.net/blog/wp-content/uploads/2019/06/load_webui.png)
 
-![](http://www.buildlog.net/blog/wp-content/uploads/2018/09/esp3d_load_ui.png)
+On your first connection, you will be prompted to load the data file that contains the WEBUI. The file is **index.html.gz**. You can [download it here](https://github.com/bdring/Grbl_Esp32/tree/master/Grbl_Esp32/data). Use the **Choose Files** button to select the that you downloaded to your computer. Then click the **Upload button**. Once the file has loaded, refresh your browser.
 
-On your first connection, you will be prompted to load the file that contains the WEBUI. The file is index.htnl.gz. You can download it here. (coming soon). Use the **Choose Files** button to select the that you downloaded to your computer. Then click the upload button. Once the file has load, refresh your browser.
+#### Users
 
-##### Users
-
-There are 2 users "admin" and "user". You need to be logged in as admin to change any WEB-UI settings. You can only interact with Grbl as "user". The default password for "admin" is "admin". The default password for "user" is "user".
+There are 2 users in the WebUI names "admin" and "user". When logged in as "admin" you can change any setting. When logged in as "user", you can only interact with Grbl. The default password for "admin" is "admin". The default password for "user" is "user".
 
 ### Preferences
 
@@ -60,8 +55,6 @@ There are 2 users "admin" and "user". You need to be logged in as admin to chang
 ##### Setup
 
 ![](http://www.buildlog.net/blog/wp-content/uploads/2018/09/esp3d_setup.png)
-
-
 
 ## Dashboard
 
