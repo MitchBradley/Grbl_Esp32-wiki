@@ -29,6 +29,10 @@ This will run file /FOO.NC
 
 Note: If in alarm mode, this command will fail with error 9
 
+### Adding / uploading files to SD card
+
+You can remove the card and use a PC to add files or you can upload them via the WebUI.
+
 
 
 ## Other Actions
