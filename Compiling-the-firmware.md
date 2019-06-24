@@ -41,7 +41,7 @@ You will get an **error 7** on the first run of the code, if you happen to have 
 
 ## Programming Errors
 
-It is common on some dev board to get "Connecting........_____....._____....._____..." The Arduino IDE is having trouble putting the ESP32 in bootloader mode. Try holding down the boot button until it gets past the "Connecting..." phase.
+It is common on some dev boards to fail to connected and give a message like "Connecting........_____....._____...." The Arduino IDE is having trouble putting the ESP32 in bootloader mode. Try holding down the boot button until it gets past the "Connecting..." phase. Be careful not to touch any of the pins near the button. That could interfere with the flash memory during upload.
 
 You may also see flash errors. I have found that some dev boards have trouble being programmed while prugged in. Try removing the dev board from the shield while programming.
 
