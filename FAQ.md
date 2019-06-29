@@ -14,4 +14,12 @@ This error is due to improper installation of required libraries. See the [Copy 
 
 This is due to a corrupt SPIFFS. It can happen when switching partition sizes. You can reformat the SPIFFS with the **[ESP710]FORMAT** command sent from a serial terminal.
 
+### Trying to access WebUI crashes ESP32
+
+If there is a chance you tried to upload some firmware with a different partition size, you may have corrupted your SPIFFS (SPI Flash File System). This is where the WebUI is stored. Try reformatting and re-uploading the WebUI. Follow the instructions below
+
+- Using a serial terminal, reformat the SPIFFS by sending **[ESP710]FORMAT pwd=admin** (only add pwd=admin if you have ENABLE_AUTHENTICATION, which is not the default)
+- Open the following URL in your web browser. **http://192.168.1.69/?forcefallback=yes** (use the address of your ESP32)
+- Load the WebUI per the instructions [here](https://github.com/bdring/Grbl_Esp32/wiki/Compiling-the-firmware) (WebUI Section).
+
 
