@@ -20,6 +20,7 @@ The goal is to add basic gcode visualization to the WebUI. This will allow a qui
 - The web page file will be served from the SD card
 - Gcode files will be read from the SD card
 - Liberal license, such as MIT
+- All files will be in /app/viewer folder on the SD card
 
 ### Discussion
 - Ask via issues
