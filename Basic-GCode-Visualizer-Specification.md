@@ -2,7 +2,7 @@
 
 ### Overview
 
-The goal is to add basic gcode visualization to the WebUI. This will allow a quick visualization of the files on the SD card. An example of a [viewer is here](http://jherrm.com/gcode-viewer/).
+The goal is to add basic gcode visualization to the WebUI. This will allow a quick visualization of the files on the SD card. An example of a [viewer is here](http://jherrm.com/gcode-viewer/). ([On GitHub](https://github.com/jherrm/gcode-viewer))
 
 ### Features
 
