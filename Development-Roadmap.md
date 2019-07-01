@@ -15,6 +15,7 @@ Here is a list of things that are considered likely to make it into the firmware
 
 ## WebUI (Wifi)
  - Add tool tips to buttons
+ - Add gcode viewer. [Specification](https://github.com/bdring/Grbl_Esp32/wiki/Basic-GCode-Visualizer-Specification)
 
 ## Display
  - Add support for a simple I2C display
