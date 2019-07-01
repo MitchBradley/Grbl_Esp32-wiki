@@ -11,7 +11,7 @@ The goal is to add basic gcode visualization to the WebUI. This will allow a qui
 - Color code by move type (G0, G1, G2/G3) No visualization of non move gcode. No visualization of extruder.
 - Can be launched from WebUI browser
 - Fast as possible loading. Do not animate loading.
-- It is not intended to show job progress.
+- It is not intended to show job progress (not sync'd with machine progress)
 
 ### Requirements
 
