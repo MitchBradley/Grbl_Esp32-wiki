@@ -22,4 +22,12 @@ If there is a chance you tried to upload some firmware with a different partitio
 - Open the following URL in your web browser. **http://192.168.1.69/?forcefallback=yes** (use the address of your ESP32)
 - Load the WebUI per the instructions [here](https://github.com/bdring/Grbl_Esp32/wiki/Compiling-the-firmware) (WebUI Section).
 
+### My gcode sender for Grbl does not appear to connect.
+
+The original Grbl was written for Arduinos. Arduinos reboot whenever you connect to the serial port. This was done as a handy way to trigger the bootloader to allow firmware to be easily uploaded. Therefore, many senders wait for the Grbl startup message after connecting.
+
+The ESP32 does not reboot when connecting. This is nice, because you don't want the CNC machine to essentially "crash" every time someone connects via serial port. Also, the ESP32 allows many other ways to connect such as Bluetooth or Wifi, which do not reboot the controller.
+
+There are other ways for the sender to see that Grbl is connected. The most common is to send a reset command. A lot of senders have the option to send the reset command when connecting. Please check the documentation for for sender or contact the developer of the sender.
+
 
