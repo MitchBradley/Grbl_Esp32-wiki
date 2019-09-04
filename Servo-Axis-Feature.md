@@ -28,11 +28,13 @@ You can reverse the direction of the servo just like you do with a stepper motor
 
 ### Calibration
 
-Calibration of the end points can be done with existing Grbl settings. This can help with servos that work outside the default PWM pulse range of 0.001sec to 0.002sec.
+Calibration of the end points can be done with existing Grbl settings. This can help with servos that work outside the default PWM pulse range of 0.001sec to 0.002sec or if you need to tweak the range of the servo.
 
 The \$10x settings are used for stepper motor resolution which does not apply to servo motors, so this is used to calibrate the PWM signal for the low end of the travel range. It is used like a percentage. \$102=95 would apply 95% to the lower pulse length and change it from the default of 0.001 to 0.00095.
 
 The $13x settings are used for the upper end of the pulse range. This is normally used for max travel, but that is applied to servos in a different way. It applies a percentage to the upper end of the pulse range, just like the lower end example.
+
+You can only use the range of 20% to 180%. If you get errors like **[MSG:Servo cal ($132) Error: 300.0000 s/b between 20.00 and 180.00]**, it means you are outside that range. To fix this error send $102=100 to reset it to 100%
 
 Z Axis Example
 
