@@ -36,6 +36,8 @@ The $13x settings are used for the upper end of the pulse range. This is normall
 
 You can only use the range of 20% to 180%. If you get errors like **[MSG:Servo cal ($132) Error: 300.0000 s/b between 20.00 and 180.00]**, it means you are outside that range. To fix this error send $102=100 to reset it to 100%
 
+**Note:** Be careful, that your calibration values do not cause the servo to push against the physical range of the servo. It will damage the servo. If it is pushing against the physical stop, the servo will vibrate and get warm. Eventually it will overheat and fail. 
+
 Z Axis Example
 
 Start with $103=100 and $132=100. This would be 100% (no change) for both ends of travel. Use $103 to the lower end of travel and $132 to adjust the upper end of travel.
