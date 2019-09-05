@@ -23,7 +23,7 @@ Here is a list of things that are considered likely to make it into the firmware
  - Wired Ethernet:
 
 ## Recently Completed
- - Add basic kinematics (see Kinematics branch)
+ - Add basic kinematics
  - Added macro button feature - Execute things like homing with a button push
  - Added additional axes up to 6
  - Current cpu_map is displayed at startup
