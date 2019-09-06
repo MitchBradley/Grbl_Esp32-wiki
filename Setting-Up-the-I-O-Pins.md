@@ -13,8 +13,8 @@ Here are the pins you can use. Be very careful to only use each I/O pin in one p
 - GPIO_NUM_5 -  (Used by SD Card)
 - GPIO_NUM_12
 - GPIO_NUM_13
-- GPIO_NUM_14
-- GPIO_NUM_15
+- GPIO_NUM_14 (some pulses at boot)
+- GPIO_NUM_15 (some pulses at boot)
 - GPIO_NUM_16
 - GPIO_NUM_17
 - GPIO_NUM_18 -  (Used by SD Card)
