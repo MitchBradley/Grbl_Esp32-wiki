@@ -18,6 +18,10 @@ An extra function was put in front of the normal function to draw a line. It loo
 
 While you are converting to a new system, the tool is still moving through material in a real world XYZ regardless of the kinematics required to make this happen. The distance in total steps of the converted line may be a different amount of steps than the original line. To compensate for this you should calculate the two distances and apply that ratio to the original feed rate. 
 
+### Position reporting
+
+Typically the position is reported in the new system. On a polar machine, for example, it will report the current radius and degrees. This can be confusing to some people. If they send it to X10, Y10, it will report X14.14 Y 45. To address this there is a forward kinematics function that can be added. Put `#define FWD_KINEMATICS_REPORTING` in you cpu_map and define a `void forward_kinematics(float *position)` function in same file you put your inverse kinematics function. See polar_coaster.cpp for an example. 
+
 ### Limitations
 
 Right now all gcode must be G0 and G1 lines. Arcs are not supported. Many CAM programs do this anyway or at least have a method to output only lines.
