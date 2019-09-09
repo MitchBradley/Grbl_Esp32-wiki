@@ -18,7 +18,7 @@ This function must be created by the user and added to the firmware. This is typ
 
 The easier way to execute macro functions is via the Serial2Socket.push(...) function, like this for homing.
 
-```Serial2Socket.push("$H\r");``` 
+```inputBuffer.push("$H\r");``` 
 
 ### Example
 
