@@ -14,6 +14,8 @@ There are some libraries that must be added to the Arduino IDE. Copy the folders
 
 **Note:** Even if you are compiling a branch, it is best to copy the libraries from the master branch. Fixes are often required to keep up with the latest Espressif Arduino Core. They would always be posted to the master branch.
 
+**TMC2130Stepper library**: If you are using a cpu map with `#define USE_TMC2130`, you will need to add the [TMC2130Stepper](https://github.com/teemuatlut/TMC2130Stepper) library to the Arduino IDE. Do this with the following menu clicks **sketch...include libraries...manage libraries**. Then search for TMC2130Stepper and add the library. 
+
 ### Customize
 
 The default firmware is setup for use with the [Grbl_ESP32 Development Board](https://www.tindie.com/products/33366583/grbl_esp32-cnc-development-board-v31/). If you have a different hardware target, make sure the I/O pin mapping is correct. See [this wiki page](https://github.com/bdring/Grbl_Esp32/wiki/Setting-Up-the-I-O-Pins).
