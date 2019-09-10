@@ -4,9 +4,10 @@ Here is a list of things that are considered likely to make it into the firmware
 
 
 ## Grbl 
- - Look into daisy chained SPI support to TMC2130, so only one CS is required for multiple TMC2130 drivers
+ - Look into daisy chained SPI support to TMC2130, so only one CS is required for multiple TMC2130 drivers. (Writing is done. Reading data is not).
  - Move to TMCStepper library for all TMC stepper drivers   
- - Add forward kinematics options so machines like polar coaster can report machine position in real world coordinates (not radius, angle).
+ - Add arc G2,G3 support to kinematics
+ - Fix COREXY midTbot resolution issue. Currently x asix resolution needs to be 2x actual. Verify feed rate during fix.
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
 
@@ -24,6 +25,7 @@ Here is a list of things that are considered likely to make it into the firmware
  - Wired Ethernet:
 
 ## Recently Completed
+ - Forward kinematics for reporting position in regular cartesian space (optional).
  - Add basic kinematics
  - Added macro button feature - Execute things like homing with a button push
  - Added additional axes up to 6
