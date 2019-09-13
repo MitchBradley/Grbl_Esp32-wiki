@@ -16,9 +16,12 @@ There are some libraries that must be added to the Arduino IDE. Copy the folders
 
 **TMC2130Stepper library**: If you are using a cpu map with `#define USE_TMC2130`, you will need to add the [TMC2130Stepper](https://github.com/teemuatlut/TMC2130Stepper) library to the Arduino IDE. Do this with the following menu clicks **sketch...include libraries...manage libraries**. Then search for TMC2130Stepper and add the library. 
 
-### Customize
+### Customize (Important!!)
 
-The default firmware is setup for use with the [Grbl_ESP32 Development Board](https://www.tindie.com/products/33366583/grbl_esp32-cnc-development-board-v31/). If you have a different hardware target, make sure the I/O pin mapping is correct. See [this wiki page](https://github.com/bdring/Grbl_Esp32/wiki/Setting-Up-the-I-O-Pins).
+The default firmware is setup in a test drive mode (**#define CPU_MAP_TEST_DRIVE**). This creates a virtual 3 axis machine that you can safely play with on an ESP32 dev module by itself or attached to any hardware. It does not actually change the state of any pins, so it is safe use  without worrying about floating input pins or shorted output pins.
+
+To use with actual hardware, you must use an existing pin map or create your own. These pin maps are defined in cpu_map.h.
+For examplethe [Grbl_ESP32 Development Board](https://www.tindie.com/products/33366583/grbl_esp32-cnc-development-board-v31/) uses pin_map **CPU_MAP_ESP32**. If you have a different hardware target, make sure the I/O pin mapping is correct. See [this wiki page](https://github.com/bdring/Grbl_Esp32/wiki/Setting-Up-the-I-O-Pins).
 
 ### Startup Info
 
