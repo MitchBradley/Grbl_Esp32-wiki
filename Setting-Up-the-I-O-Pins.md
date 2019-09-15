@@ -8,13 +8,18 @@ Here are the pins you can use. Be very careful to only use each I/O pin in one p
 
 ### Usable I/O pins
 
-- GPIO_NUM_2 (Some dev boards have an LED on this. It works better as an output)
+- GPIO_NUM_2 
+  - Some dev boards have an LED on this. It works better as an output
+  - [It must be either left unconnected/floating, or driven Low, in order to enter the serial bootloader.]( https://github.com/espressif/esptool/wiki/ESP32-Boot-Mode-Selection)
 - GPIO_NUM_4
 - GPIO_NUM_5 -  (Used by SD Card)
 - GPIO_NUM_12
+    - [If driven High, flash voltage (VDD_SDIO) is 1.8V not default 3.3V. Has internal pull-down, so unconnected = Low = 3.3V. May prevent flashing and/or booting if 3.3V flash is used and this pin is pulled high, causing the flash to brownout. See the ESP32 datasheet for more details](https://github.com/espressif/esptool/wiki/ESP32-Boot-Mode-Selection)
 - GPIO_NUM_13
 - GPIO_NUM_14 (some pulses at boot)
-- GPIO_NUM_15 (some pulses at boot)
+- GPIO_NUM_15 
+    - Some pulses at boot
+    - [If driven Low, silences boot messages printed by the ROM bootloader. Has an internal pull-up, so unconnected = High = normal output](https://github.com/espressif/esptool/wiki/ESP32-Boot-Mode-Selection)
 - GPIO_NUM_16
 - GPIO_NUM_17
 - GPIO_NUM_18 -  (Used by SD Card)
