@@ -25,7 +25,8 @@ There is no filter, all files and folders are reported. Senders, WebUI, etc shou
 ### Print SD file
 [ESP220] <Filename> pwd=<user/admin password>
 
-This will run file /FOO.NC 
+[ESP220]/Foo.nc
+This will run file /Foo.nc
 
 Note: If in alarm mode, this command will fail with error 9
 
