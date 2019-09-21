@@ -6,10 +6,12 @@ There are more features than available I/O pins, so you need to determine what f
 
 Here are the pins you can use. Be very careful to only use each I/O pin in one place.
 
+During boot mode, a few of the pins need to be in a special state or have output pulses (see notes below). Improper use of these pins could impair the bootloader or be damaged I/O.
+
 ### Usable I/O pins
 
 - GPIO_NUM_2 
-  - Some dev boards have an LED on this. It works better as an output
+  - Some dev boards have an LED on this. It does not work well as an input, because the LED affects the voltage on the pin.
   - [It must be either left unconnected/floating, or driven Low, in order to enter the serial bootloader.]( https://github.com/espressif/esptool/wiki/ESP32-Boot-Mode-Selection)
 - GPIO_NUM_4
 - GPIO_NUM_5 -  (Used by SD Card)
