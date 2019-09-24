@@ -13,6 +13,7 @@ During boot mode, a few of the pins need to be in a special state or have output
 - GPIO_NUM_2 
   - Some dev boards have an LED on this. It does not work well as an input, because the LED affects the voltage on the pin.
   - [It must be either left unconnected/floating, or driven Low, in order to enter the serial bootloader.]( https://github.com/espressif/esptool/wiki/ESP32-Boot-Mode-Selection)
+  - I like to use it as the spindle pin. The LED gives a nice indication of the spindle on and PWM level.
 - GPIO_NUM_4
 - GPIO_NUM_5 -  (Used by SD Card)
 - GPIO_NUM_12
