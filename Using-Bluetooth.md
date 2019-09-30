@@ -2,7 +2,7 @@
 
 - Make sure **#define ENABLE_BLUETOOTH** is not commented out in **config.h**.
 - Use a USB serial port terminal to set the Bluetooth name using the [ESP140]< Bluetooth name> pwd=XXX command. [See this doc](https://github.com/bdring/Grbl_Esp32/blob/master/doc/Commands.txt) on how to use those types of commands. I don't know all the naming rules, so keep it short and simple. There is no capability to use a password yet. Example: [ESP410]ESP32_BT pwd=admin This would give the name "ESP32_BT" and use the default password "admin"
-- Put the ESP32 into Bluetooth mode with the [ESP115]BT pwd=XXX command. [See this doc](https://github.com/bdring/Grbl_Esp32/blob/master/doc/Commands.txt) on how to use those types of commands. The ESP32 uses the same hardware for Wifi and bluetooth, so only one can be used at a time. 
+- Put the ESP32 into Bluetooth mode with the [ESP110]BT pwd=XXX command. [See this doc](https://github.com/bdring/Grbl_Esp32/blob/master/doc/Commands.txt) on how to use those types of commands. The ESP32 uses the same hardware for Wifi and bluetooth, so only one can be used at a time. 
 - Reboot the ESP32 to turn on Bluetooth with that name. Grbl will send **Starting Bluetooth:ESP32BT** as the first item when booting to let you know Bluetooth is on. ESP32BT is the Bluetooth name I used in this case. Grbl will now respond on either Bluetooth or Serial data.
 - Bluetooth is setup as a serial Bluetooth. This means when you pair it with a device, it will look like a serial port. This allow backward compatibility with existing serial port senders, like Universal GCode Sender
 - **Caution:** Do not pair while running a job. The ESP32 will likely interrupt and/or watchdog issues while the stepper timer is running and the pairing process is running.
