@@ -50,7 +50,7 @@ Here are the steps required to put it on your nework
 
 - [ESP100]YourSSID
 - [ESP101]YourPassword
-- [ESP115]STA
+- [ESP110]STA
 
 Now reboot the system.
 
