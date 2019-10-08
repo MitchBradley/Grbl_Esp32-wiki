@@ -9,6 +9,7 @@ Here is a list of things that are considered likely to make it into the firmware
  - Add arc G2,G3 support to kinematics
  - Fix COREXY midTbot resolution issue. Currently x asix resolution needs to be 2x actual. Verify feed rate during fix.
  - Implement $N startup lines feature.
+ - Add commands to control additional I/O
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
 
