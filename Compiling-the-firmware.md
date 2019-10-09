@@ -8,9 +8,9 @@ Here are the settings you should use.
 
 ![IDE Settings](http://www.buildlog.net/blog/wp-content/uploads/2019/04/esp32_settings.png)
 
-### Copy Libraries
+### <a name="libraries">Copy Libraries 
 
-There are some libraries that must be added to the Arduino IDE. Copy the folders in the [Libraries](https://github.com/bdring/Grbl_Esp32/tree/master/libraries) folder to the libraries folder in your Arduino folder on your computer. Typically some folder like "...\Documents\Arduino\libraries" (Windows computer).
+</a>There are some libraries that must be added to the Arduino IDE. Copy the folders in the [Libraries](https://github.com/bdring/Grbl_Esp32/tree/master/libraries) folder to the libraries folder in your Arduino folder on your computer. Typically some folder like "...\Documents\Arduino\libraries" (Windows computer).
 
 **Note:** Even if you are compiling a branch, it is best to copy the libraries from the master branch. Fixes are often required to keep up with the latest Espressif Arduino Core. They would always be posted to the master branch.
 
