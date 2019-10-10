@@ -42,7 +42,7 @@ After loading the file, refresh your browser. If you reload firmware, check to s
 
 ## First Run
 
-You will get an **error 7** on the first run of the code, if you happen to have a serial terminal open you will see it. It is normal behavior. It is trying to load saved settings, which don't exist yet, so it loads defaults. You should not see the error again.
+You will get an **error 7** and possibly other error on the first run of the code, if you happen to have a serial terminal open you will see it. It is normal behavior. It is trying to load saved settings, which don't exist yet, so it loads defaults. You should not see the error again.
 
 ## Firmware Upload Errors
 
