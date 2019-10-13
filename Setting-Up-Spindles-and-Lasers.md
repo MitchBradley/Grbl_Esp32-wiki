@@ -43,4 +43,16 @@ This is the base frequency of the PWM signal. The default value of 5000 is good 
 
 The PWM signal is based on an 80,000,000 Hz counter. If you have a a frequency of 5000 Hz, you have 16000 (80,000,000 / 5000) counts per cycle to use for resolution. The resolution is specified in bits, so a resolution of 8 would specify a range of 0 to 255. The firmware scales the bit range you specify to the actual range (16000 in the example above). The highest resolution you should specify for the 5000Hz example would be 13 bits. That range (0 to 8191) is the highest that is less than 16000.
 
+#### Piecewise Linear Fit (Advanced)
+
+Some spindle RPMs are not very linear with the PWM signal. If you want these spindles to be more accurate with the commanded speed, you can enable `#define ENABLE_PIECEWISE_LINEAR_SPINDLE` in config.h. There is a python script in the doc/script folder called fit_nonlinear_spindle.py. There are instructions in the script on how to use it in the comments of the script.
+
+Here is an example of the before and after.
+
+![](http://www.buildlog.net/blog/wp-content/uploads/2019/10/piecewise_example.png)
+
+
+
+
+
   
