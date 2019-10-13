@@ -4,12 +4,9 @@ Here is a list of things that are considered likely to make it into the firmware
 
 
 ## Grbl 
- - Look into daisy chained SPI support to TMC2130, so only one CS is required for multiple TMC2130 drivers. (Writing is done. Reading data is not).
- - Move to TMCStepper library for all TMC stepper drivers   
  - Add arc G2,G3 support to kinematics
  - Fix COREXY midTbot resolution issue. Currently x asix resolution needs to be 2x actual. Verify feed rate during fix.
  - Implement $N startup lines feature.
- - Add commands to control additional I/O
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
 
@@ -27,6 +24,12 @@ Here is a list of things that are considered likely to make it into the firmware
  - Wired Ethernet:
 
 ## Recently Completed
+ - Added M62 and M63 support for additional digital I/O control.
+ - Added Piecewise Linear Fitto compensate non linear spindle speed controllers.
+ - Added ability to invert the spindle PWM output
+ - You can now daisy chain Trinamic drivers.
+ - Now using TMCStepper library to support more Trinamic drivers
+ - New HOMING_FORCE_POSITIVE_SPACE feature to homing
  - Forward kinematics for reporting position in regular cartesian space (optional).
  - Add basic kinematics
  - Added macro button feature - Execute things like homing with a button push
