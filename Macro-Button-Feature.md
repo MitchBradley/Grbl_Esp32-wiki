@@ -20,6 +20,8 @@ The easier way to execute macro functions is via the Serial2Socket.push(...) fun
 
 ```inputBuffer.push("$H\r");``` 
 
+**Note:** Make sure `IGNORE_CONTROL_PINS` is not NOT defined. You probably should also define `ENABLE_CONTROL_SW_DEBOUNCE`
+
 ### Example
 
 The Polar Coast adds (3) macro buttons. You can look at that cpu_map. polar_coaster.cpp has the user_defined_macro function.  It has a home button , a button to run gcode file 1.nc and a button to run 2.nc for the SD card. This is a simple way to make a headless machine.
