@@ -2,7 +2,7 @@
 
 ### Issue
 
-Please create an issue for general discuss regarding the changes in the pull request. Ideally this is done before the pull request is submitted. Pull requests are always welcome and encouraged, but coordinating efforts saves time for everyone.
+Please create an issue for general discuss regarding the changes in the pull request. Ideally this is done before the pull request is submitted. Pull requests are always welcome and encouraged, but coordinating efforts saves time for everyone. Discussion via Slack is also acceptable.
 
 ### Branches
 
