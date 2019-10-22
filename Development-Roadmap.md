@@ -4,7 +4,6 @@ Here is a list of things that are considered likely to make it into the firmware
 
 
 ## Grbl 
- - Add arc G2,G3 support to kinematics
  - Fix COREXY midTbot resolution issue. Currently x asix resolution needs to be 2x actual. Verify feed rate during fix.
  - Implement $N startup lines feature.
  - Add M67 command to control analog (PWM) output to user defined pins
@@ -25,6 +24,7 @@ Here is a list of things that are considered likely to make it into the firmware
  - Wired Ethernet:
 
 ## Recently Completed
+ - Added arc G2,G3 support to kinematics
  - Added M62 and M63 support for additional digital I/O control.
  - Added Piecewise Linear Fitto compensate non linear spindle speed controllers.
  - Added ability to invert the spindle PWM output
