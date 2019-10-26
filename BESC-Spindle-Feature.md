@@ -4,9 +4,11 @@
 
 A lot of small CNC machines are using Brushless DC motors as the spindle motor. They are cheap and pack a ton of power in a small package. They are designed to be installed in RC vehicles and controlled with joysticks, so they take a little hacking to get them to work. Grbl_ESP32 can handle the basic electronic signals, but they vary greatly in features and setup requirements.
 
+**Bottom Line:** This is an advanced feature. These motors/ESCs were not designed for this application. Each motor is different, so don't expect perfect support on the forums. The motor may not behave or be as responsive as a normal spindle motor. and...**Never Trust It!** Power it down when changing bits, etc
+
 ![](http://www.buildlog.net/blog/wp-content/uploads/2019/10/besc_example.png)
 
-**Bottom Line:** This is an advanced feature. These motors/ESCs were not designed for this application. Each motor is different, so don't expect perfect support on the forums. The motor may not behave or be as responsive as a normal spindle motor. 
+
 
 ![](http://www.buildlog.net/blog/wp-content/uploads/2019/10/besc.png)
 
