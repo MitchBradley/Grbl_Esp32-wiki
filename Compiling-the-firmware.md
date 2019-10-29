@@ -14,7 +14,7 @@ Here are the settings you should use.
 
 **Note:** Even if you are compiling a branch, it is best to copy the libraries from the master branch. Fixes are often required to keep up with the latest Espressif Arduino Core. They would always be posted to the master branch.
 
-**TMC2130Stepper library**: If you are using a cpu map with `#define USE_TMC2130`, you will need to add the [TMC2130Stepper](https://github.com/teemuatlut/TMC2130Stepper) library to the Arduino IDE. Do this with the following menu clicks **sketch...include libraries...manage libraries**. Then search for TMC2130Stepper and add the library. 
+**TMCStepper library**: If you are using a cpu map with `#define USE_TRINAMIC`, you will need to add the [TMCStepper](https://github.com/teemuatlut/TMCStepper) library to the Arduino IDE. Do this with the following menu clicks **sketch...include libraries...manage libraries**. Then search for TMCStepper and add the library. 
 
 ### Customize (Important!!)
 
