@@ -20,7 +20,7 @@ Brushless spindle motors are supported in Grbl_ESP32. These motors are controlle
 
 ### Start Up Sequence
 
-As a safety measure, they have a special startup sequence. The PWM signal could be accidentally set to a high speed at turn on and this could be very dangerous. Also, it needs to learn what your PWM off and PWM max speed values are. 
+The ESC needs to learn what you want to use for your PWM max and PWM off values. You need to do a special turn on sequence for this to happen. On most ESCs, you only need to do this once for your settings. The ESC can use the coils to vibrate the motor to sound like beeps. These beeps will help you with the process.
 
 Your BESC might be a little different, but a common startup sequence is a s follows. Set the PWM to max, apply power to the ESC, wait for some beeps, set PWM to minimum, wait for more beeps. There may be more steps to set other values. You need to do this manually via gcode commands when using the ESC feature of Grbl_ESP32. See more on this below.
 
@@ -77,10 +77,7 @@ Suppose your turn on sequence is...power on at full speed, wait for beeps, lower
 - Wait for beeps
 - **M5** (turns off spindle)
 
-You can now control your spindle normally.
-
-If you want to automate this, you could create a gcode file. You would add **G4 Px** between steps as a delay where X is seconds. Example: **G4 P1.5** = 1.5 second delay.
-
+You can now control your spindle normally. For future uses, you probably don't need to re-calibrate, but you do nned to wait for the beeps that signal it is ready.
 
 
 
