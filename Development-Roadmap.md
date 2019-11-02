@@ -3,7 +3,7 @@ Here is a list of things that are considered likely to make it into the firmware
 ## System Level
 
 
-## Grbl 
+## Grbl (Note: Donations help get roadmap items done)
  - Fix COREXY midTbot resolution issue. Currently x asix resolution needs to be 2x actual. Verify feed rate during fix.
  - Implement $N startup lines feature.
  - Add M67 command to control analog (PWM) output to user defined pins
