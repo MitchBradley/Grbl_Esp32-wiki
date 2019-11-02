@@ -4,6 +4,8 @@ Here is a list of things that are considered likely to make it into the firmware
 
 
 ## Grbl (Note: Donations help get roadmap items done)
+ - Add $33, $34, $35, $36 Spindle settings to allow changes without recompile
+ - Add $14x, $15x, $16x to allow changes to Trinamic run current , hold current and microstepping without recompile
  - Fix COREXY midTbot resolution issue. Currently x asix resolution needs to be 2x actual. Verify feed rate during fix.
  - Implement $N startup lines feature.
  - Add M67 command to control analog (PWM) output to user defined pins
