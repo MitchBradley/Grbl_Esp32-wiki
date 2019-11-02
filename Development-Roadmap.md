@@ -8,6 +8,7 @@ Here is a list of things that are considered likely to make it into the firmware
  - Implement $N startup lines feature.
  - Add M67 command to control analog (PWM) output to user defined pins
  - Add option to turn off spindle enable in laser mode. This can be used to have a laser and spindle on the same machine.
+ - Support more trinamic driver types.
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
 
