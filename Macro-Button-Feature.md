@@ -4,6 +4,12 @@
 
 Macro buttons allow you to associate a switch closure with a simple command like homing or running a file from the SD card.
 
+### Electrical
+
+Buttons are typically used as normally open GPIO inputs that switch to ground. They need a pull up resistor to hold the pin in a high state when not closed to ground. Most pins have an internal pull up that will be used. GPIO pins 34 through 39 do not have a pull up resistor and you will need to add them. A 10k pull up to 3.3v is typical.
+
+**Advanced:** You can use normally closed switches. You will have to invert the logic using the **#define INVERT_CONTROL_PIN_MASK** in config.h
+
 ### Implementation
 
 Macro buttons are similar to the control switches (reset, hold, etc). You can define up to (4) of them. You add them to your cpu_mpa like...
