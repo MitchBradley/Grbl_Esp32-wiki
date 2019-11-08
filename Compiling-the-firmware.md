@@ -23,6 +23,8 @@ The default firmware is setup in a test drive mode (**#define CPU_MAP_TEST_DRIVE
 To use with actual hardware, you must use an existing pin map or create your own. These pin maps are defined in cpu_map.h.
 For examplethe [Grbl_ESP32 Development Board](https://www.tindie.com/products/33366583/grbl_esp32-cnc-development-board-v31/) uses pin_map **CPU_MAP_ESP32**. If you have a different hardware target, make sure the I/O pin mapping is correct. See [this wiki page](https://github.com/bdring/Grbl_Esp32/wiki/Setting-Up-the-I-O-Pins).
 
+**Important:** Some of the cpu maps for existing controllers have revisions levels. Check the cpu map to see if you need to set a revision level to match your controller.
+
 ### Startup Info
 
 The USB serial port is established right away and will display a lot of useful information. It will also ride through a crash and display useful debugging information. If you want to know the Wifi settings being used, watch this port on startup.
