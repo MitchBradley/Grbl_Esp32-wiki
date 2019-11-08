@@ -30,4 +30,12 @@ The ESP32 does not reboot when connecting. This is nice, because you don't want 
 
 There are other ways for the sender to see that Grbl is connected. The most common is to send a reset command. A lot of senders have the option to send the reset command when connecting. Please check the documentation for for sender or contact the developer of the sender.
 
+### It appears to work, but the motors don't move
+
+Make sure you are using the correct cpu map. All of the input and output pins are configured by the cpu maps. The default one has no pins mapped and just acts like a simulator. This is the safest cpu map, because it is harder to damage the i/o pins. During bootup, the name of the cpu map you are using is typically sent to the sUSB/serial port.
+
+The is more information about the cpu maps on [this wiki page.](https://github.com/bdring/Grbl_Esp32/wiki/Compiling-the-firmware)
+
+
+
 
