@@ -2,7 +2,7 @@
 
 The code should be compiled using the latest Arduino IDE and esp32 core. **Seriously...the latest!** [Follow instructions](https://github.com/espressif/arduino-esp32) here on how to setup ESP32 in the IDE. The choice was made to use the Arduino IDE over the ESP-IDF to make the code a little more accessible to novices trying to compile the code. Be sure to use the latest Arduino IDE and ESP files.
 
-Bluetooth and all wifi options are now compiled into one large firmware. You need to select the **Minimal SPIFFS (Large APPS and OTA)** partition scheme under the Tools...Partition Scheme... menus or the firmware and WebUI will not fit.
+OTA (Over the air) firmware updates, Bluetooth and all wifi options are now compiled into one large firmware. You need to select the **Minimal SPIFFS (Large APPS and OTA)** partition scheme under the Tools...Partition Scheme... menus or the firmware and WebUI will not fit.
 
 Here are the settings you should use.
 
