@@ -27,6 +27,10 @@ Here is a list of things that are considered likely to make it into the firmware
  - Wired Ethernet:
 
 ## Recently Completed
+- More homing options for special kinematics.
+- $80-$84 to save some integer values for use on custom machines. kinematics, etc
+- $90-$94 to save some float values for use on custom machines. kinematics, etc
+- $170-$175 Settings for Trinamic Stallguard level
  - Added Trinamic SPI daisy chain otion
  - Add $33, $34, $35, $36 Spindle settings to allow changes without recompile
  - Add $14x, $15x, $16x to allow changes to Trinamic run current , hold current and microstepping without recompile
