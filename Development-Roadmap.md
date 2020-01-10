@@ -1,5 +1,11 @@
 Here is a list of things that are considered likely to make it into the firmware. If you would like to work on anything here, please let us know on the Slack channel (request an invite, if needed). If you think something should be added to this list, please suggest it on Slack or start a new [issue](https://github.com/bdring/Grbl_Esp32/issues).
 
+## <a name="donation"></a>Donation
+
+This project requires a lot of work and often expensive items for testing. Please consider a safe, secure and highly appreciated donation via the PayPal link below.
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKNJ9Z775VXB2)
+
 ## System Level
 
 
@@ -14,6 +20,8 @@ Here is a list of things that are considered likely to make it into the firmware
  - Add a [ESP](no params) command to display all [ESP] command
  - Add a $$$ command to display all $$ values when extended settings are not currently shown.
  - Remove RMT_CHANNEL stuff from CPU_MAP
+ - RS485 Modbus VFD Spindle Support
+ - Analog Voltage Spindle Support (via internal DAC)
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
 
