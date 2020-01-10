@@ -11,6 +11,9 @@ Here is a list of things that are considered likely to make it into the firmware
  - Support more trinamic driver types.
  - Support for RS485 control of VFD spindles.
  - Support for analog spindle control (0-10V, etc) via DAC pins.
+ - Add a [ESP](no params) command to display all [ESP] command
+ - Add a $$$ command to display all $$ values when extended settings are not currently shown.
+ - Remove RMT_CHANNEL stuff from CPU_MAP
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
 
