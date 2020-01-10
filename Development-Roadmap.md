@@ -20,6 +20,7 @@ This project requires a lot of work and often expensive items for testing. Pleas
  - Add a [ESP](no params) command to display all [ESP] command
  - Add a $$$ command to display all $$ values when extended settings are not currently shown.
  - Remove RMT_CHANNEL stuff from CPU_MAP
+ - Backlash compensation
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
 
