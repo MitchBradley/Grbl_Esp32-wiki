@@ -1,5 +1,7 @@
 ## Compiling Firmware
 
+**Note:** It is always best to program the ESP32 the first time unattached to a controller board. Any previous firmware could put pins in a state that damages the ESP32 when powered on. Program it unattached and verify the firmware via the USB first. Never plug in the ESP32 or any other items while powered on. 
+
 The code should be compiled using the latest Arduino IDE and esp32 core. **Seriously...the latest!** [Follow instructions](https://github.com/espressif/arduino-esp32) here on how to setup ESP32 in the IDE. The choice was made to use the Arduino IDE over the ESP-IDF to make the code a little more accessible to novices trying to compile the code. Be sure to use the latest Arduino IDE and ESP files.
 
 OTA (Over the air) firmware updates, Bluetooth and all wifi options are now compiled into one large firmware. You need to select the **Minimal SPIFFS (Large APPS and OTA)** partition scheme under the Tools...Partition Scheme... menus or the firmware and WebUI will not fit.
