@@ -20,8 +20,6 @@ This project requires a lot of work and often expensive items for testing. Pleas
  - Add a [ESP](no params) command to display all [ESP] command
  - Add a $$$ command to display all $$ values when extended settings are not currently shown.
  - Remove RMT_CHANNEL stuff from CPU_MAP
- - RS485 Modbus VFD Spindle Support
- - Analog Voltage Spindle Support (via internal DAC)
 ## Bluetooth
  - **Add Password Support** Apparently this is now in the ESP-IDF. What does it take to get into the Arduino Core version.
 
