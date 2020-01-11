@@ -7,9 +7,10 @@ The [ESP...] commands work on any interface (Serial, Bluetooth, Wifi, WebUI, etc
 - Make sure **#define ENABLE_BLUETOOTH** is not commented out in **config.h**.
 - Use a USB serial port terminal to set the Bluetooth name using the **[ESP140]< Bluetooth name>**. [See this doc](https://github.com/bdring/Grbl_Esp32/blob/master/doc/Commands.txt) on how to use [ESP...] commands. I don't know all the Bluetooth naming rules, so keep the name short and simple. There is no capability to use a password yet. Example: **[ESP410]ESP32_BT**. This would set the Bluetooth name to "ESP32_BT".
 - Put the radio mode into Bluetooth mode with the [ESP110]BT. The ESP32 uses the same hardware for Wifi and Bluetooth, so only one can be used at a time.
-- Reboot the ESP32 to turn on Bluetooth with that name. You can reboot by power cycling, pushing the reset button on the ESP32 module or sending the **[ESP444]RESTART** command.
+- A reboot is required to change radio modes.  Reboot the ESP32 to turn on Bluetooth with that name. You can reboot by power cycling, pushing the reset button on the ESP32 module or sending the **[ESP444]RESTART** command.
 - Bluetooth is setup as a serial Bluetooth. This means when you pair it with a device, it will look like a serial port. This allow backward compatibility with existing serial port senders, like Universal GCode Sender
 - **Caution:** Do not pair while running a job. The ESP32 will likely interrupt and/or watchdog issues while the stepper timer is running and the pairing process is running.
+-   **Tip:** If you are in BT mode you can switch back to Wifi from your Bluetooth console with [ESP110]STA or [ESP110]AP, then reboot
 
 ### Android
 
