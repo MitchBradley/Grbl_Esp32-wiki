@@ -19,7 +19,6 @@ Here is a section of a cpu map for reference.
 #define X_DRIVER_TMC2130 	// Which Driver Type?
 #define X_CS_PIN    		GPIO_NUM_17  // Daisy Chain, all share same CS pin
 #define X_RSENSE			0.11f   // .11 Ohm current sense resistor
-#define X_RMT_CHANNEL		0
 ```
 
 
@@ -51,7 +50,6 @@ Grbl_ESP32 supports this mode. You set this up in your cpu map. Below in an exam
 #define X_DRIVER_TMC2130 	// Which Driver Type?
 #define X_CS_PIN    		GPIO_NUM_17  // Daisy Chain, all share same CS pin
 #define X_RSENSE			0.11f   // .11 Ohm
-#define X_RMT_CHANNEL		0
 	
 #define Y_STEP_PIN      	GPIO_NUM_27
 #define Y_DIRECTION_PIN   	GPIO_NUM_26
@@ -59,10 +57,11 @@ Grbl_ESP32 supports this mode. You set this up in your cpu map. Below in an exam
 #define Y_DRIVER_TMC2130 	// Which Driver Type?
 #define Y_CS_PIN    		X_CS_PIN  // Daisy Chain, all share same CS pin
 #define Y_RSENSE			0.11f   // .11 Ohm
-#define Y_RMT_CHANNEL		1	
 ```
 
+### Troubleshooting
 
+**Note:** The drivers will not response without primary motor voltage. The ESP32 can appear to be working with USB only, but the drivers will not respond.
 
 
 
