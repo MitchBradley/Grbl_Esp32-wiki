@@ -36,6 +36,47 @@ Make sure you are using the correct cpu map. All of the input and output pins ar
 
 The is more information about the cpu maps on [this wiki page.](https://github.com/bdring/Grbl_Esp32/wiki/Compiling-the-firmware)
 
+### Submitting Bug Information
+
+If you need help it is very important to give us information regarding your configuration. Most of this information is only available on the USB/Serial serial port. The information is sent to the serial port because it is the only connection that is available during startup and during a crash. WiFi and Bluetooth run in firmware, so they will not be on at startup and will be lost during a crash.
+
+**Startup messages.**
+
+Grbl_ESP32 outputs messages at startup on the USB/Serial port. You can get the firmware to restart at any time by clicking the reset button on the module or by sending [ESP444]RESTART on the USB/Serial port. The message information looks something like this.
+
+```
+[MSG:Compiled with ESP32 SDK:v3.3.1-61-g367c3c09c]
+[MSG:Using cpu_map:CPU_MAP_DEFAULT - Demo Only No I/O!]
+[MSG:Axis count 3]
+[MSG:Timed Steps]
+
+[MSG:Client Started]
+[MSG:Connecting Barts-WLAN]
+[MSG:Connecting.]
+[MSG:Connecting..]
+[MSG:Connected with 192.168.1.21]
+[MSG:Start mDNS with hostname:http://grblesp.local/]
+[MSG:SSDP Started]
+[MSG:HTTP Started]
+[MSG:TELNET Started 23]
+
+Grbl 1.1f ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+```
+
+It is the [MSG:....] stuff we are interested.
+
+**Backtrace.**
+
+When it crashes it will provide so BackTrace information on the USB/Serial port. This information will tell us what function caused the crash and all the calling functions. It will help us greatly. 
+
+**Decoding the Backtrace.**
+
+Using the Arduino IDE, you can enter the backtrace into a decoder. This is a plugin you must install. [The details are here](https://github.com/me-no-dev/EspExceptionDecoder).
+
+
+
+
 
 
 
