@@ -59,6 +59,10 @@ Grbl_ESP32 supports this mode. You set this up in your cpu map. Below in an exam
 #define Y_RSENSE			0.11f   // .11 Ohm
 ```
 
+### $$ Settings
+
+Several $$ settings are used for Trinamic motors. Read [this section](https://github.com/bdring/Grbl_Esp32/wiki/$$-Settings-Menu) to see more details.
+
 ### Troubleshooting
 
 **Note:** The drivers will not response without primary motor voltage. The ESP32 can appear to be working with USB only, but the drivers will not respond.
