@@ -1,14 +1,16 @@
 ## Compiling Firmware
 
+**Note** These instructions assume you know how to use the Arduino IDE to compile and upload.
+
 **Note:** It is always best to program the ESP32 the first time unattached to a controller board. Any previous firmware could put pins in a state that damages the ESP32 when powered on. Program it unattached and verify the firmware via the USB first. Never plug in the ESP32 or any other items while powered on. 
 
 The code should be compiled using the latest Arduino IDE and esp32 core. **Seriously...the latest!** [Follow instructions](https://github.com/espressif/arduino-esp32) here on how to setup ESP32 in the IDE. The choice was made to use the Arduino IDE over the ESP-IDF to make the code a little more accessible to novices trying to compile the code. Be sure to use the latest Arduino IDE and ESP files.
 
-OTA (Over the air) firmware updates, Bluetooth and all wifi options are now compiled into one large firmware. You need to select the **Minimal SPIFFS (Large APPS and OTA)** partition scheme under the Tools...Partition Scheme... menus or the firmware and WebUI will not fit.
+OTA (Over the air) firmware updates, Bluetooth and all wifi options are now compiled into one large firmware. You need to select the **Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)** partition scheme under the Tools...Partition Scheme... menus or the firmware and WebUI will not fit.
 
 Here are the settings you should use.
 
-![IDE Settings](http://www.buildlog.net/blog/wp-content/uploads/2019/04/esp32_settings.png)
+![IDE Settings](http://www.buildlog.net/blog/wp-content/uploads/2020/02/ide_ss.png)
 
 ### <a name="libraries">Copy Libraries 
 
@@ -23,7 +25,7 @@ Here are the settings you should use.
 The default firmware is setup in a test drive mode (**#define CPU_MAP_TEST_DRIVE**). This creates a virtual 3 axis machine that you can safely play with on an ESP32 dev module by itself or attached to any hardware. It does not actually change the state of any pins, so it is safe use  without worrying about floating input pins or shorted output pins.
 
 To use with actual hardware, you must use an existing pin map or create your own. These pin maps are defined in cpu_map.h.
-For examplethe [Grbl_ESP32 Development Board](https://www.tindie.com/products/33366583/grbl_esp32-cnc-development-board-v31/) uses pin_map **CPU_MAP_ESP32**. If you have a different hardware target, make sure the I/O pin mapping is correct. See [this wiki page](https://github.com/bdring/Grbl_Esp32/wiki/Setting-Up-the-I-O-Pins).
+For example the [Grbl_ESP32 Development Board](https://www.tindie.com/products/33366583/grbl_esp32-cnc-development-board-v31/) uses pin_map **CPU_MAP_ESP32**. If you have a different hardware target, make sure the I/O pin mapping is correct. See [this wiki page](https://github.com/bdring/Grbl_Esp32/wiki/Setting-Up-the-I-O-Pins). The #define goes in the config.h file near the top. 
 
 **Important:** Some of the cpu maps for existing controllers have revisions levels. Check the cpu map to see if you need to set a revision level to match your controller.
 
@@ -39,10 +41,11 @@ When you first try to use the WebUI, you will get this screen.
 
 <img src="http://www.buildlog.net/blog/wp-content/uploads/2018/11/load_webui.jpg" width="600">
 
+
 ***
 The file, "index.html.gz". It is in [this folder](https://github.com/bdring/Grbl_Esp32/tree/master/Grbl_Esp32/data).
 
-After loading the file, refresh your browser. If you reload firmware, check to see if "index.htnl.gz" has changed. If you need to upload a new version of "index.html.gz", use the green folder icon on the ESP32 tab of the WebUI.
+After loading the file, refresh your browser. If you reload firmware, check to see if "index.html.gz" has changed. If you need to upload a new version of "index.html.gz", use the green folder icon on the ESP32 tab of the WebUI.
 
 ## First Run
 
