@@ -63,6 +63,14 @@ Grbl_ESP32 supports this mode. You set this up in your cpu map. Below in an exam
 
 Several $$ settings are used for Trinamic motors. Read [this section](https://github.com/bdring/Grbl_Esp32/wiki/$$-Settings-Menu) to see more details.
 
+### StallGaurd (SG)
+
+SG is a feature of Trinamic motors where stalls can be detected and a signal can be routed to a pin. Some people like to use this to do sensorless homing. Basic Grbl does not support this. Advanced users can implement this using custom machine functions.
+
+This requires good programming skills and and a thorough understanding of the SG feature. Feel free to ask question on Slack about this, but it will be a lower priority for devs to answer than standard Grbl support. Consider a donation to the project if you are asking a lot of questions :-)
+
+Very basically...SG works by looking at changes in motor efficiency. If a motor is running under a light load it is more efficient, if it starts to stall, the efficiency lowers. The driver's ability to detect this is affected by many things. It has trouble detecting changes at very high step rates and very low step rates. You need to find the best speed to home at for it to work well. Your machine setup will also affect the baseline efficiency. Its normal load, the length and gauges of the wires, etc lower the efficiency. There are several parameters you can change to "tune" SG so it works on your machine. Finally, SG is not super accurate. At best it is accurate to a few full steps. Normal switches are typically more accurate.
+
 ### Troubleshooting
 
 **Note:** The drivers will not response without primary motor voltage. The ESP32 can appear to be working with USB only, but the drivers will not respond.
