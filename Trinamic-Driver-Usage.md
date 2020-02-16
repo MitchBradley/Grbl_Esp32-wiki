@@ -65,7 +65,7 @@ Several $$ settings are used for Trinamic motors. Read [this section](https://gi
 
 ### StallGaurd (SG)
 
-SG is a feature of Trinamic motors where stalls can be detected and a signal can be routed to a pin. Some people like to use this to do sensorless homing. Basic Grbl does not support this. Advanced users can implement this using custom machine functions.
+SG is a feature of Trinamic motors where stalls can be detected and a signal can be routed to a pin. Some people like to use this to do sensorless homing. Basic Grbl does not support this. Advanced users can implement this using [custom machine functions](https://github.com/bdring/Grbl_Esp32/wiki/Custom-Machine-Functions).
 
 This requires good programming skills and and a thorough understanding of the SG feature. Feel free to ask question on Slack about this, but it will be a lower priority for devs to answer than standard Grbl support. Consider a donation to the project if you are asking a lot of questions :-)
 
